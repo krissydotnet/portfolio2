@@ -232,36 +232,22 @@ main {
     font-family: var(--secondary-font);
     text-align: left;
 }
+.swiper-slide {
+    text-align: center;
+}
 
-.project-tile {
-    flex-basis: 18%;
+.project-tile-image img {
+    width: 35rem;
+}
+
+a.project-tile {
     text-decoration: none;
-    width: 250px;
-    padding: 15px;
-    margin: 15px;
-    background-color: white;
-    border-radius: 15px;
-    color: var(--text-color);
-    box-shadow: 5px 5px 8px var(--text-color);
-
+    color: var(--primary-color);
 }
-
-.project-tile:hover {
-    transform: scale(1.1);
+.project-tile h3 {
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
 }
-
-.project-tile-image {
-    border: 1px solid black;
-    margin: 0;
-    width: 100%;
-}
-
-.project-tile img {
-    margin: 0;
-    width: 200px;
-    height: 175px;
-}
-
 #contacts-section {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -293,8 +279,14 @@ main {
     align-content: center;
 }
 
+@keyframes spin {
+    to {
+      transform: rotateY(360deg);
+    }
+  }
 
 .social-media:hover {
+    animation: spin 1.5s ease-in-out infinite;
     background-color: white;
     color: var(--text-color);
     transform:
@@ -420,9 +412,3 @@ main {
     
 }
 
-.swiper-slide {
-    text-align: center;
-}
-.swiper-slide img {
-    height: 400px;
-}
